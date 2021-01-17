@@ -39,3 +39,31 @@ function getVoteCount(votes) {
 function getVoteCount(votes) {
   return votes["upvotes"] - votes["downvotes"];
 }
+
+function minMax(arr) {
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+
+  return [min, max];
+}
+
+function canNest(arr1, arr2) {
+  return (
+    Math.min(...arr1) > Math.min(...arr2) &&
+    Math.max(...arr1) < Math.max(...arr2)
+  );
+}
+const years = [1763, 1972, 1925, 1916, 1984, 1124, 1950, 2020];
+
+function getYears(years) {
+  return years.filter((year) => year > 1950);
+}
+const numbers = [1, 4, 9, 16];
+
+function subtractTwo(numbers) {
+  return numbers.map((x) => x - 2);
+}
+
+function tuckIn(arr1, arr2) {
+  return [arr1[0], ...arr2, arr1[1]];
+}
