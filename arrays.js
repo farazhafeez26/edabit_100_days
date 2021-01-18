@@ -67,3 +67,11 @@ function subtractTwo(numbers) {
 function tuckIn(arr1, arr2) {
   return [arr1[0], ...arr2, arr1[1]];
 }
+
+function numberSplit(n) {
+  return [Math.floor(n / 2), Math.ceil(n / 2)];
+}
+
+function filterArray(arr) {
+  return arr.filter((x) => Number.isInteger(x));
+}
