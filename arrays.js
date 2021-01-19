@@ -75,3 +75,7 @@ function numberSplit(n) {
 function filterArray(arr) {
   return arr.filter((x) => Number.isInteger(x));
 }
+
+function parseArray(arr) {
+  return arr.map(String);
+}
