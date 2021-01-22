@@ -83,3 +83,123 @@ function parseArray(arr) {
 const array1 = [1, 2, "a", "1a"];
 
 console.log(array1.toString());
+
+function dropRight(arr, num = 1) {
+  return arr.splice(0, arr.length - num);
+}
+
+//Stuck
+// https://e/dabit.com/challenge/JDkyQJqNfJNhvjmRW
+
+function objectToArray(obj) {
+  const allKeys = Object.keys(obj);
+  const allValues = allKeys.map((x) => {
+    return [x, obj[x]];
+  });
+  return allValues;
+}
+
+function getBudgets(arr) {
+  const sum = arr.reduce((acc, element) => {
+    return acc + element.budget;
+  }, 0);
+  return sum;
+}
+
+// [1,2,3]
+// [1,2,3].reduce(func, initial_value)
+// (acc, el) => () -->  0, 1 ------> first_return
+// (acc, el) => () -->  (first_return,2) -->
+
+function calculateLosses(obj) {
+  const allKeys = Object.keys(obj);
+
+  const allValues = allKeys.map((x) => {
+    return obj[x];
+  });
+
+  if (allKeys.length == 0) {
+    return "Lucky you!";
+  }
+
+  return allValues.reduce((acc, val) => {
+    return acc + val;
+  }, 0);
+}
+
+function freeShipping(order) {
+  const allValues = Object.values(order);
+  //NOTE it always has to be an array
+  const orderSum = allValues.reduce((acc, val) => {
+    return acc + val;
+  }, 0);
+
+  if (orderSum > 50) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//Note for each
+
+function afterNYears(names, n) {
+  const allKeys = Object.keys(names);
+  allKeys.forEach((x) => {
+    names[x] = names[x] + Math.abs(n); //absolute number
+  });
+  return names;
+}
+
+function invert(o) {
+  const allKeys = Object.keys(o); // get key of initial object
+
+  const newObject = {}; // create a new empty object
+
+  allkeys.forEach((x) => {
+    newObject[o[x]] = x; // { "value": "key"  };
+  });
+
+  return newObject;
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach///forEach modifies the object or arrays
+//https://edabit.com/challenge/YTECpnCCeJsYqYvfF
+
+//invert({ "z": "q", "w": "f" })
+//➞ { "q": "z", "f": "w" }
+
+function invert(o) {
+  const allKeys = Object.keys(o);
+
+  const newObject = {};
+
+  allkeys.forEach((x) => {
+    newObject[o[x]] = x;
+  });
+  return newObject;
+}
+
+function freeShipping(order) {
+  const allValues = Object.values(order);
+  //NOTE it always has to be an array
+  const orderSum = allValues.reduce((acc, val) => {
+    return acc + val;
+  }, 0);
+
+  if (orderSum > 50) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//Note for each
+
+function afterNYears(names, n) {
+  const allKeys = Object.keys(names);
+  allKeys.forEach((x) => {
+    names[x] = names[x] + Math.abs(n); //absolute number
+  });
+  return names;
+}
