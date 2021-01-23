@@ -203,3 +203,20 @@ function afterNYears(names, n) {
   });
   return names;
 }
+
+function invert(o) {
+  const hi = {};
+
+  const allKeys = Object.keys(o);
+  const allValues = allKeys.forEach((x) => {
+    hi[o[x]] = x;
+  });
+  return hi;
+}
+
+const alphabets = {
+  q: "z",
+  f: "w",
+};
+
+console.log(invert(alphabets));
