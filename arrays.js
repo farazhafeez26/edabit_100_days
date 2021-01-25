@@ -254,3 +254,11 @@ const order = {
 };
 
 console.log(expensiveOrders(order, 1000));
+
+function afterNYears(names, n) {
+  const allKeys = Object.keys(names);
+  allKeys.forEach((x) => {
+    names[x] = names[x] + Math.abs(n); //absolute number
+  });
+  return names;
+}
