@@ -262,3 +262,24 @@ function afterNYears(names, n) {
   });
   return names;
 }
+
+function afterNYears(names, n) {
+  const allKeys = Object.keys(names);
+  allKeys.forEach((x) => {
+    names[x] = names[x] + Math.abs(n);
+  });
+}
+
+function mostExpensiveItem(obj) {
+  const allKeys = Object.keys(obj);
+  const MaxValue = allKeys.map((x) => {
+    return Math.max(obj[x]);
+  });
+  return MaxValue;
+}
+
+// mostExpensiveItem({
+//  tv: 30,
+// skate: 20,
+// stereo: 50,
+//}) ➞ "stereo"
