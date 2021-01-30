@@ -174,8 +174,8 @@ function invert(o) {
 
   const newObject = {};
 
-  allkeys.forEach((x) => {
-    newObject[o[x]] = x;
+  allKeys.forEach((old_key) => {
+    newObject[o[old_key]] = old_key; // put the old key as value in the newObject at the key: o[old_key]
   });
   return newObject;
 }
@@ -272,14 +272,94 @@ function afterNYears(names, n) {
 
 function mostExpensiveItem(obj) {
   const allKeys = Object.keys(obj);
-  const MaxValue = allKeys.map((x) => {
-    return Math.max(obj[x]);
+  let max = 0;
+  let mostExpensiveItem = null;
+
+  allKeys.forEach((x) => {
+    const value = obj[x];
+
+    // update the max value
+    if (value > max) {
+      max = value;
+      mostExpensiveItem = x;
+    }
   });
-  return MaxValue;
+
+  return mostExpensiveItem;
 }
+
+
+
+function mostExpensiveItem*
+
+
+// With reduce
+
+function mostExpensiveItem(obj) {
+  const allKeys = Object.keys(obj); // ["tv", "skate", "stereo" ]
+
+  const mostExpensiveItem = allKeys.reduce((acc, val, ind) => {
+    console.log(acc, val, ind);
+
+    if (obj[acc] < obj[val]) {
+      return val;
+    } else {
+      return acc;
+    }
+  });
+  return mostExpensiveItem;
+}
+
+/*
+Math.max(30);
+Math.max(20);
+Math.max(50);
+
+const max = 50;
+
+MaxValue = [30, 20, 50];
+*/
 
 // mostExpensiveItem({
 //  tv: 30,
 // skate: 20,
 // stereo: 50,
 //}) ➞ "stereo"
+
+
+
+function invert(o) {
+    const allKeys = Object.keys(o);
+  
+    const newObject = {};
+  
+    allKeys.forEach((old_key) => {
+      console.log(old_key, o[old_key]);
+      
+      newObject[o[old_key]] = old_key; // put the old key as value in the newObject at the key: o[old_key]
+    });
+    return newObject;
+  }
+  
+  console.log(invert({ "z": "q", "w": "f" }));
+
+
+  console.log(mostExpensiveItem({
+    tv: 30,
+    skate: 20,
+    stereo: 50,
+    }));
+    
+    function mostExpensiveItem(ob){
+        const allKeys=Object.keys(obj);
+        const mostExpensiveItem=allKeys.reduce((acc,val,ind)=>{
+            console.log(acc,val,ind);
+
+            if(obj[acc] <obj[val]){
+                return val;
+            } else {
+                return acc;
+            }
+                   });
+                   return mostExpensiveItem;
+    }
