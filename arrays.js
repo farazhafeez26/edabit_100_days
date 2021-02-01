@@ -363,3 +363,7 @@ function invert(o) {
                    });
                    return mostExpensiveItem;
     }
+
+    function mapping(letters) {
+        return letters.reduce((a, c) => (a[c] = c.toUpperCase(), a), {});
+    }
