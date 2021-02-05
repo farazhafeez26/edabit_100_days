@@ -367,3 +367,6 @@ function invert(o) {
     function mapping(letters) {
         return letters.reduce((a, c) => (a[c] = c.toUpperCase(), a), {});
     }
+
+    const areaOfCountry = (name, area) =>
+  `${name} is ${Math.round(area / 14894) / 100}% of the total world's landmass`;
