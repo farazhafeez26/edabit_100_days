@@ -370,3 +370,14 @@ function invert(o) {
 
     const areaOfCountry = (name, area) =>
   `${name} is ${Math.round(area / 14894) / 100}% of the total world's landmass`;
+
+
+
+  function arrayOfMultiples (num, length) {
+    var result = []
+      for (let i = 1; i <= length; i++) {
+          result.push(num*i)
+          
+      }
+      return result
+  }
