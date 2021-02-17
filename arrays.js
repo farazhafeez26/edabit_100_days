@@ -383,6 +383,11 @@ function invert(o) {
   }
 
 
+  product(1,2)(1,1)(2,3) ➞ 8
+// 1 * 1 * 2 + 2 * 1 * 3
+  const product = (a, b) => (c, d) => (e, f) => a * c * e + b * d * f;
+
+
 /*  invert({ "z": "q", "w": "f" })
 ➞ { "q": "z", "f": "w" }
 
