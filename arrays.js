@@ -402,3 +402,7 @@ invert({ "zebra": "koala", "horse": "camel" })
       Object.entries(o).map(arr => arr.reverse())
     );
   }  
+
+  function convert(minutes) {
+    return  minutes * 60;
+  }
