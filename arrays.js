@@ -406,3 +406,7 @@ invert({ "zebra": "koala", "horse": "camel" })
   function convert(minutes) {
     return  minutes * 60;
   }
+
+  function findPerimeter(length,width){
+    return (length + width) * 2;
+  }
