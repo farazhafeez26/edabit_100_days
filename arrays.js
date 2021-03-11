@@ -410,3 +410,41 @@ invert({ "zebra": "koala", "horse": "camel" })
   function findPerimeter(length,width){
     return (length + width) * 2;
   }
+
+  var bobsFollowers=["jack","jacob", "faraz", "farhan"];
+
+var tinasFollowers=["jack","jacob", "Lilly"]; 
+
+mutualFollowers=[""];
+
+
+
+for (let i=0; i < bobsFollowers.length; i++)
+{
+  for (let j=0;  j < tinasFollowers.length; j++) {
+    if(bobsFollowers[i]===tinasFollowers[j]) {
+       mutualFollowers.push(bobsFollowers[i]);
+        console.log(mutualFollowers);      
+    }
+  }
+};
+const cards = ['diamond', 'spade', 'heart', 'club'];
+
+// Write your code below
+
+
+let currentCard = "";
+
+let i = 0;
+
+while (currentCard != "spade"){
+
+i = Math.floor(Math.random() * 4);
+
+currentCard = cards[i];
+
+console.log(currentCard);
+
+ 
+
+}
