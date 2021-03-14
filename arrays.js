@@ -448,3 +448,24 @@ console.log(currentCard);
  
 
 }
+
+
+let currentcount= [""]; 
+
+for (let i=0; i<bobsFollowers.length; i++){
+ currentcount.push (bobsFollowers[i]);
+ 
+ console.log(currentcount);
+
+}
+
+var bobsFollowers=["jack","jacob", "faraz", "farhan"];
+
+let currentcount= []; 
+
+for (let i=0; i<3; i++){
+ currentcount.push (bobsFollowers[i]);
+ 
+ console.log(currentcount);
+
+}
